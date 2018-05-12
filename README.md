@@ -47,7 +47,7 @@ tns build android --bundle --env.aot --env.uglify --env.snapshot
 
 ## Autor
 
-* Esta app fue hecha por **JuanCarlos "Juanky" Aguilera** y subida en Google PlayStore bajo el nombre de [JuankyApps](https://juankyapps.com).
+* Esta app fue hecha por **JuanCarlos "Juanky" Aguilera** y subida a [Google Play](https://play.google.com/store/apps/details?id=com.juankyapps.YAAAY) bajo el nombre de [JuankyApps](https://juankyapps.com).
 
 ## Licencia
 
