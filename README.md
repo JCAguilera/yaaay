@@ -32,7 +32,7 @@ tns run android --bundle --env.aot --env.uglify --env.snapshot
 ```
 Sigue esta [guía oficial](https://docs.nativescript.org/angular/tutorial/ng-chapter-1#12-running-apps) para ejecutar el ejemplo.
 
-### Deployment
+### Generar APK
 
 **OJO: Necesitas un certificado válido para construir un APK.**
 Para construir un apk (y generar un certificado) lee esta [guía](https://docs.nativescript.org/angular/publishing/publishing-android-apps).
