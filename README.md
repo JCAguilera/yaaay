@@ -51,4 +51,4 @@ tns build android --bundle --env.aot --env.uglify --env.snapshot
 
 ## Licencia
 
-Licencia MIT - ver [LICENSE.md](LICENSE.md) para mas detalles.
+Licencia MIT - ver [LICENSE](LICENSE) para mas detalles.
