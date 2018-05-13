@@ -25,7 +25,6 @@ export class MainComponent implements OnInit{
         this._vibrator = new Vibrate();
         this._page.actionBarHidden = true;
         this._player.initFromFile({
-            // `${fs.knownFolders.currentApp().path}/path-to-webview-content.html`
             audioFile: `~/res/yay.mp3`, // ~ = app directory
             loop: false
         });
@@ -36,7 +35,8 @@ export class MainComponent implements OnInit{
     }
 
     onYaayButtonTap(): void {
-        setNumber('yaaayTimes', this.yaaayTimes+1);
+        this.yaaayTimes++;
+        setNumber('yaaayTimes', this.yaaayTimes);
         if (this._player.isAudioPlaying()){
             if(getBoolean('spamChk', false)){
                 this._player.seekTo(0);
