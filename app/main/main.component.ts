@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page/page";
 import { Router } from "@angular/router";
 import { getBoolean, getNumber, setNumber } from 'application-settings';
-import { TNSPlayer } from 'nativescript-audio';
+import { TNSPlayer } from 'nativescript-audio-player';
 import { Vibrate } from 'nativescript-vibrate'
 
 @Component({
@@ -35,18 +35,23 @@ export class MainComponent implements OnInit{
     }
 
     onYaayButtonTap(): void {
-        this.yaaayTimes++;
-        setNumber('yaaayTimes', this.yaaayTimes);
         if (this._player.isAudioPlaying()){
             if(getBoolean('spamChk', false)){
+                this.yaaayCounter();
                 this._player.seekTo(0);
             }
         }else{
+            this.yaaayCounter();
             this._player.play();
         }
         if(getBoolean('vibChk', true)){
             this._vibrator.vibrate(getNumber('vibTime', 2000));
         }
+    }
+
+    private yaaayCounter(): void {
+        this.yaaayTimes++;
+        setNumber('yaaayTimes', this.yaaayTimes);
     }
 
 }
