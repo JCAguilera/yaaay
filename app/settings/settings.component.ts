@@ -20,9 +20,9 @@ export class SettingsComponent implements OnInit {
 
     stadistics: string;
 
-    appVer = '1.1';
+    appVer = '1.2';
     aboutTitle = 'Acerca de YAAAY! ' + this.appVer;
-    about = `Hecho con amor por Juanky.\nYAAAY! es una demo de aplicación nativa usando Nativescript + Angular 5.\nLa fuente está disponible en GitHub bajo la licencia MIT.\nTambién disponible una versión hecha con AndroidStudio.`;
+    about = `Hecho con amor por Juanky.\nYAAAY! es una demo de aplicación nativa usando Nativescript + Angular.\nLa fuente está disponible en GitHub bajo la licencia MIT.\nTambién disponible una versión hecha con AndroidStudio.`;
     
     githubIcon: string;
 
