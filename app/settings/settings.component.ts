@@ -1,4 +1,4 @@
-import { OnInit, Component, OnChanges } from "@angular/core";
+﻿import { OnInit, Component, OnChanges } from "@angular/core";
 import { Router } from "@angular/router";
 import { Page, EventData } from "tns-core-modules/ui/page/page";
 import { Slider } from 'tns-core-modules/ui/slider/slider';
@@ -20,7 +20,7 @@ export class SettingsComponent implements OnInit {
 
     stadistics: string;
 
-    appVer = '1.2';
+    appVer = '1.3';
     aboutTitle = 'Acerca de YAAAY! ' + this.appVer;
     about = `Hecho con amor por Juanky.\nYAAAY! es una demo de aplicación nativa usando Nativescript + Angular.\nLa fuente está disponible en GitHub bajo la licencia MIT.\nTambién disponible una versión hecha con AndroidStudio.`;
     
