@@ -21,10 +21,8 @@ Clona e instala el ejemplo:
 
 ```
 git clone https://github.com/JCAguilera/yaaay.git
-cd yaaay
 npm install
 ```
-O puedes abrirlo con [NativeScript Sidekick](https://www.nativescript.org/nativescript-sidekick).
 
 ### Ejecutar
 
@@ -37,7 +35,7 @@ Sigue esta [guía oficial](https://docs.nativescript.org/angular/tutorial/ng-cha
 ### Generar APK
 
 **OJO: Necesitas un certificado válido para construir un APK.**
-Para construir un apk (y generar un certificado) lee esta [guía](https://docs.nativescript.org/tooling/publishing/publishing-android-apps).
+Para construir un apk (y generar un certificado) lee esta [guía](https://docs.nativescript.org/angular/publishing/publishing-android-apps).
 ```
 tns build android --bundle --env.aot --env.uglify --env.snapshot
 ```
