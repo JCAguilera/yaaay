@@ -20,9 +20,9 @@ export class SettingsComponent implements OnInit {
 
     stadistics: string;
 
-    appVer = '1.3';
+    appVer = '1.4';
     aboutTitle = 'Acerca de YAAAY! ' + this.appVer;
-    about = `Hecho con amor por Juanky.\nYAAAY! es una demo de aplicación nativa usando Nativescript + Angular.\nLa fuente está disponible en GitHub bajo la licencia MIT.\nTambién disponible una versión hecha con AndroidStudio.`;
+    about = `Hecho con amor por Juanky.\nYAAAY! es una demo de aplicación nativa usando Nativescript y Angular.\nEl código fuente está disponible en GitHub bajo la licencia MIT.\nTambién está disponible una versión hecha en AndroidStudio.`;
     
     githubIcon: string;
 
@@ -54,7 +54,7 @@ export class SettingsComponent implements OnInit {
     }
 
     goToGithub() {
-        utils.openUrl("https://github.com/JCAguilera/yaaay");
+        utils.openUrl("https://github.com/JuankyApps/yaaay");
     }
 
     goBack() {
