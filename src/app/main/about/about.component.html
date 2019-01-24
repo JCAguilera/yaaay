@@ -1,0 +1,11 @@
+<ActionBar title="{{ 'about' | L }}">
+  <!-- iOS Only -->
+  <NavigationButton text="{{ 'go_back' | L }}" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<AbsoluteLayout>
+  <ScrollView orientation="vertical" left="0" top="0" isEnabled="true" width="100%" height="100%">
+    <StackLayout orientation="vertical" padding="10">
+      <Label *ngFor="let line of getAbout()" class="content" text="{{ line }}" textWrap="true"></Label>
+    </StackLayout>
+  </ScrollView>
+</AbsoluteLayout>

@@ -1,0 +1,45 @@
+
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout">
+      <StackLayout class="sideTitleStackLayout">
+        <Label class="sideTitleLabel" text="YAAAY!"></Label>
+      </StackLayout>
+      <ScrollView>
+        <StackLayout class="sideStackLayout">
+          <Label text="{{ 'settings' | L }}" class="sideLabel sideLightGrayLabel"></Label>
+          <GridLayout rows="auto auto" columns="* *">
+            <Label class="sideLabel" text="{{ 'vibrate' | L }}" textWrap="true" row="0" col="0"></Label>
+            <Switch checked="{{ getSetting('vibChk') }}" (checkedChange)="toggleSetting('vibChk', $event)" row="0" col="1"></Switch>
+          </GridLayout>
+          <GridLayout rows="auto auto" columns="* *">
+            <Label class="sideLabel" text="{{ 'counter' | L }}" textWrap="true" row="0" col="0"></Label>
+            <Switch checked="{{ getSetting('counterChk') }}" (checkedChange)="toggleSetting('counterChk', $event)" row="0" col="1"></Switch>
+          </GridLayout>
+          <Label text="{{ 'about' | L }}" class="sideLabel sideLightGrayLabel"></Label>
+          <Label text="{{ 'why_yaaay' | L }}" (tap)="onAboutButtonPress()" class="sideLabel"></Label>
+          <Label text="{{ 'changelog' | L }}" (tap)="onChangelogButtonPress()" class="sideLabel"></Label>
+          <Label text="{{ 'github' | L }}" (tap)="openUrl('https://github.com/JuankyApps/yaaay')" class="sideLabel"></Label>
+          <Label text="{{ 'website' | L }}" (tap)="openUrl('https://juankyapps.com')" class="sideLabel"></Label>
+          <Label text="JuankyApps" class="logoLabel"></Label>
+          <Image class="logo" (tap)="openUrl('https://juankyapps.com')" src="~/app/res/juankyapps.png" width="75"></Image>
+          <Label text="{{ 'version' | L }} 1.5" class="logoLabel"></Label>
+        </StackLayout>
+      </ScrollView>
+  </StackLayout>
+  <GridLayout (loaded)="onGridLoaded($event)" tkMainContent>
+    <AbsoluteLayout class="top-left" (tap)="openDrawer()">
+      <Label class="fas" text="&#xf0c9;"></Label>
+    </AbsoluteLayout>
+    <AbsoluteLayout class="top-panel">
+      <Label text="Juanky {{ 'presents' | L }}:"></Label>
+    </AbsoluteLayout>
+    <StackLayout class="main-panel">
+      <Image style="width: 50%" src="~/app/res/yaaay.png"></Image>
+      <Label textWrap="true" text="{{ 'press_to_yaaay' | L }}"></Label>
+      <Button text="YAAAY!" id="yaaay-btn" (touch)="onYaaayBtnTouch($event)"></Button>
+    </StackLayout>
+    <AbsoluteLayout *ngIf="getSetting('counterChk')" class="center-bottom">
+      <Label id="counter" text="{{ getYaaayCounter() | L:getYaaayCount()  }}"></Label>
+    </AbsoluteLayout>
+  </GridLayout>
+</RadSideDrawer>
