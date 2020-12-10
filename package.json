@@ -36,14 +36,15 @@
     "@nativescript/angular": "10.0.0",
     "@nativescript/core": "rc",
     "@nativescript/theme": "~2.2.1",
-    "tslib": "1.10.0",
-    "@nativescript/webpack": "3.0.0"
+    "tslib": "1.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.2",
     "@angular/cli": "~10.0.0",
     "@angular/compiler-cli": "~10.0.0",
     "@nativescript/android": "7.0.1",
+    "@nativescript/types": "~7.0.0",
+    "@nativescript/webpack": "3.0.0",
     "@nativescript/schematics": "~0.5.0",
     "@nativescript/tslint-rules": "~0.0.5",
     "@ngtools/webpack": "~7.1.0",
