@@ -4,8 +4,9 @@ platforms
 lib
 hooks
 dist
-*.js
+src/*.js
 *.map
 *.log
 *.bak
 package-lock.json
+.migration_backup
