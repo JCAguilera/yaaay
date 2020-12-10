@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { localize } from "nativescript-localize";
-import * as platform from "tns-core-modules/platform";
 
 @Component({
   selector: "ns-changelog",

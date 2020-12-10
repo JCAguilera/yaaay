@@ -5,24 +5,22 @@ import {
   ChangeDetectorRef,
   AfterViewInit,
 } from "@angular/core";
-import { AnimationCurve } from "tns-core-modules/ui/enums";
-import { Page } from "tns-core-modules/ui/page/page";
-import { Router } from "@angular/router";
 import {
-  getBoolean,
-  getNumber,
-  setNumber,
-  setBoolean,
-} from "application-settings";
+  Enums,
+  Page,
+  Switch,
+  Application,
+  Utils,
+  Device,
+  ApplicationSettings,
+} from "@nativescript/core";
+import { Router } from "@angular/router";
 import { TNSPlayer } from "nativescript-audio-player";
 import { Vibrate } from "nativescript-vibrate";
 import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
-import { Switch } from "tns-core-modules/ui/switch";
-import * as app from "tns-core-modules/application";
-import * as platform from "tns-core-modules/platform";
-import * as utils from "utils/utils";
 
+const { getNumber, setNumber, getBoolean, setBoolean } = ApplicationSettings;
 declare var android: any;
 
 @Component({
@@ -64,10 +62,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   onGridLoaded(args): void {
-    var window = app.android.startActivity.getWindow();
+    var window = Application.android.startActivity.getWindow();
     var View = android.view.View;
-    if (app.android && platform.device.sdkVersion >= "21") {
-      var window = app.android.startActivity.getWindow();
+    if (Application.android && Device.sdkVersion >= "21") {
+      var window = Application.android.startActivity.getWindow();
       window.setStatusBarColor(0x000000);
       window.setNavigationBarColor(0x000000);
       var decorView = window.getDecorView();
@@ -86,14 +84,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.button.animate({ scale: { x: 0.7, y: 0.7 }, duration: 100 });
     } else if (ev.action === "up") {
       this.doYaaay();
-      this.button
-        .animate({ scale: { x: 1, y: 1 }, duration: 100 })
-        .then(() =>
-          this.button.animate({
-            scale: { x: 0.8, y: 0.8 },
-            curve: AnimationCurve.spring,
-          })
-        );
+      this.button.animate({ scale: { x: 1, y: 1 }, duration: 100 }).then(() =>
+        this.button.animate({
+          scale: { x: 0.8, y: 0.8 },
+          curve: Enums.AnimationCurve.spring,
+        })
+      );
     }
   }
 
@@ -130,7 +126,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   openUrl(url: string): void {
-    utils.openUrl(url);
+    Utils.openUrl(url);
   }
 
   openDrawer() {
