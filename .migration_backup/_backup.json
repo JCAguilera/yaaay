@@ -9,6 +9,13 @@
 		"package.json",
 		"tsconfig.tns.json",
 		"nsconfig.json",
-		"src\\package.json"
+		"src\\package.json",
+		"hooks",
+		"webpack.config.js",
+		"package.json",
+		"package-lock.json",
+		"tsconfig.tns.json",
+		"package.json",
+		"tsconfig.tns.json"
 	]
 }
