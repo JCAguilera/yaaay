@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptRouterModule } from "@nativescript/angular";
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./main/home/home.component";
 import { ChangelogComponent } from "./main/changelog/changelog.component";
