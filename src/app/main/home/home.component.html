@@ -1,5 +1,5 @@
-<RadSideDrawer tkExampleTitle tkToggleNavButton>
-  <StackLayout tkDrawerContent class="sideStackLayout">
+<Drawer>
+  <StackLayout leftDrawer class="sideStackLayout" #drawer>
     <StackLayout class="sideTitleStackLayout">
       <Label class="sideTitleLabel" text="YAAAY!"></Label>
     </StackLayout>
@@ -74,8 +74,8 @@
       </StackLayout>
     </ScrollView>
   </StackLayout>
-  <GridLayout (loaded)="onGridLoaded($event)" tkMainContent>
-    <AbsoluteLayout class="top-left" (tap)="openDrawer()">
+  <GridLayout mainContent (loaded)="onGridLoaded($event)">
+    <AbsoluteLayout class="top-left" (tap)="drawer.open()">
       <Label class="fas" text="&#xf0c9;"></Label>
     </AbsoluteLayout>
     <AbsoluteLayout class="top-panel">
@@ -97,4 +97,4 @@
       ></Label>
     </AbsoluteLayout>
   </GridLayout>
-</RadSideDrawer>
+</Drawer>

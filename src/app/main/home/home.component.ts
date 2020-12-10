@@ -1,7 +1,6 @@
 import {
   Component,
   OnInit,
-  ViewChild,
   ChangeDetectorRef,
   AfterViewInit,
 } from "@angular/core";
@@ -13,12 +12,11 @@ import {
   Utils,
   Device,
   ApplicationSettings,
+  Button,
 } from "@nativescript/core";
 import { Router } from "@angular/router";
 import { TNSPlayer } from "nativescript-audio-player";
 import { Vibrate } from "nativescript-vibrate";
-import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
-import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 
 const { getNumber, setNumber, getBoolean, setBoolean } = ApplicationSettings;
 declare var android: any;
@@ -30,10 +28,7 @@ declare var android: any;
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild(RadSideDrawerComponent)
-  public drawerComponent: RadSideDrawerComponent;
-  private drawer: RadSideDrawer;
-  button;
+  button: Button;
 
   _player: TNSPlayer;
   _vibrator: Vibrate;
@@ -57,7 +52,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.drawer = this.drawerComponent.sideDrawer;
     this._changeDetectionRef.detectChanges();
   }
 
@@ -129,10 +123,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     Utils.openUrl(url);
   }
 
-  openDrawer() {
-    this.drawer.showDrawer();
-  }
-
   toggleSetting(setting: string, args) {
     var checked = (<Switch>args.object).checked;
     setBoolean(setting, checked);
@@ -150,9 +140,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
   onChangelogButtonPress() {
     this.router.navigate(["changelog"]);
     return;
-  }
-
-  onCloseDrawerTap() {
-    this.drawer.closeDrawer();
   }
 }

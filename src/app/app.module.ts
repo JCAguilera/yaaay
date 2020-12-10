@@ -1,7 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
 import { NativeScriptModule } from "@nativescript/angular";
-import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { DrawerModule } from "@nativescript-community/ui-drawer/angular";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -22,7 +22,7 @@ import { AboutComponent } from "./main/about/about.component";
     NativeScriptModule,
     NativeScriptLocalizeModule,
     AppRoutingModule,
-    NativeScriptUISideDrawerModule,
+    DrawerModule,
   ],
   declarations: [
     AppComponent,
