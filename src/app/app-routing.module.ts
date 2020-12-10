@@ -6,14 +6,14 @@ import { ChangelogComponent } from "./main/changelog/changelog.component";
 import { AboutComponent } from "./main/about/about.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/home", pathMatch: "full" },
-    { path: 'home', component: HomeComponent },
-    { path: 'changelog', component: ChangelogComponent },
-    { path: 'about', component: AboutComponent }
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
+  { path: "changelog", component: ChangelogComponent },
+  { path: "about", component: AboutComponent },
 ];
 
 @NgModule({
-    imports: [NativeScriptRouterModule.forRoot(routes)],
-    exports: [NativeScriptRouterModule]
+  imports: [NativeScriptRouterModule.forRoot(routes)],
+  exports: [NativeScriptRouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
