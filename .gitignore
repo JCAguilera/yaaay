@@ -8,3 +8,4 @@ dist
 *.map
 *.log
 *.bak
+package-lock.json
