@@ -24,32 +24,37 @@ git clone https://github.com/JCAguilera/yaaay.git
 cd yaaay
 npm install
 ```
+
 O puedes abrirlo con [NativeScript Sidekick](https://www.nativescript.org/nativescript-sidekick).
 
 ### Ejecutar
 
 Para ejecutar el ejemplo, conecta tu dispositivo (o emulador) y usa este comando:
+
 ```
 tns run android --bundle --env.aot --env.uglify --env.snapshot
 ```
+
 Sigue esta [guía oficial](https://docs.nativescript.org/angular/tutorial/ng-chapter-1#12-running-apps) para ejecutar el ejemplo.
 
 ### Generar APK
 
 **OJO: Necesitas un certificado válido para construir un APK.**
 Para construir un apk (y generar un certificado) lee esta [guía](https://docs.nativescript.org/tooling/publishing/publishing-android-apps).
+
 ```
 tns build android --bundle --env.aot --env.uglify --env.snapshot
 ```
 
 ## Hecho con
 
-* [NativeScript](https://www.nativescript.org)
-* [Angular](https://angular.io)
+- [NativeScript 7](https://www.nativescript.org)
+- [Angular 10](https://angular.io)
+- Mucho amor
 
 ## Autor
 
-* Esta app fue hecha por **JuanCarlos "Juanky" Aguilera** y subida a [Google Play](https://play.google.com/store/apps/details?id=com.juankyapps.YAAAY) bajo el nombre de [JuankyApps](https://juankyapps.com).
+- Esta app fue hecha por **JuanCarlos "Juanky" Aguilera** y subida a [Google Play](https://play.google.com/store/apps/details?id=com.juankyapps.YAAAY) bajo el nombre de [JuankyApps](https://juankyapps.com).
 
 ## Licencia
 
