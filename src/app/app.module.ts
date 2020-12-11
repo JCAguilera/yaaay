@@ -1,7 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
+import { NativeScriptLocalizeModule } from "@nativescript/localize/angular";
 import { NativeScriptModule } from "@nativescript/angular";
-import { DrawerModule } from "@nativescript-community/ui-drawer/angular";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -10,19 +10,13 @@ import { HomeComponent } from "./main/home/home.component";
 import { ChangelogComponent } from "./main/changelog/changelog.component";
 import { AboutComponent } from "./main/about/about.component";
 
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from "nativescript-angular/forms";
-
-// Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
-// import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
     NativeScriptModule,
     NativeScriptLocalizeModule,
     AppRoutingModule,
-    DrawerModule,
+    NativeScriptUISideDrawerModule,
   ],
   declarations: [
     AppComponent,

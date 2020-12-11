@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="_changelog_1_5_3_Z2tlz7">"- Nuevo ícono adaptativo para nuestros amigos en Oreo.\n- Cambios menores que no necesitan ser listados.\n- Eliminada la política de privacidad ¡Muajaja!"</string>
+  <string name="_changelog_1_5_2_Z2tlz8">"- Se redujo el tamaño de la app, pero no la cantidad de CO2 en la atmósfera. #ProblemasReales"</string>
+  <string name="_changelog_1_5_1_Z2tlz9">"- Arreglado un error que no dejaba que el sonido de YAAAY! se reprodujera. Si, lo sé."</string>
+  <string name="_changelog_1_5_2lWB4H">"- Nuevo diseño! Hemos rediseñado la aplicación completamente, ahora muestra un diseño más limpio y atractivo que se enfoca en lo que más importa: YAAAY!\n- Hello World! Ahora YAAAY! está disponible en Inglés y Español.\n- Hemos reparado múltiples errores de código para hacer espacio para otros errores mejores y más poderosos."</string>
+  <string name="_changelog_1_4_2lWB4G">"- El gobierno al que le vendíamos su información ha sido derrocado, ahora tendrá más privacidad.\n- Gracias al avance de la tecnología moderna, ahora la app inicia un microsegundo (o algo así) más rápido que en versiones anteriores."</string>
+  <string name="_changelog_1_3_2lWB4F">"Arreglado un error que hacía que el título de la aplicación tuviese menos emoción. (\"yaaay\" -> \"YAAAY!\")."</string>
+  <string name="_changelog_1_2_2lWB4E">"- Ya no se requiere el permiso del micrófono.\n- Arreglado algunos bugs del contador."</string>
+  <string name="_changelog_1_1_2lWB4D">"YAAAY! ahora disponible para todos!\nCambios:\n- Se redujo el tamaño de la app.\n- Se incorporaron nuevos íconos.\n- Cambio de diseño para soportar pantallas de todos los tamaños!\n- Se agregó un contador de YAAAYs.\n- Se agregó una sección de Acerca De en la configuración de la app.\n- Se arreglaron algunos bugs.\n- Ya no vendemos tu información a mafias rusas.\n- Lo último fue un chiste.\n- Cálmese."</string>
+  <string name="_changelog_alpha_1_Z1J1HBC">"Alpha Publicada &lt;3"</string>
+  <string name="_changelog_pre_alpha_1_ZhoOdv">"Primera subida &lt;3"</string>
+  <string name="about_content">"¡Celebra eventos aleatorios con tus amigos!\n\nEsto es YAAAY!, la nueva app para ayudarte a celebrar en esos momentos especiales cuando nadie más puede.\n\nYAAAY! tambien funciona de ejemplo como una aplicación móvil creada con NativeScript y Angular. Utiliza conceptos como:\n\n- Navegación (Routing).\n- Reproducción de audio.\n- Componentes gráficos (como el menú lateral o los interruptores).\n- Animaciones.\n- Guardar y cargar configuraciones simples.\n- Internacionalización (Diferentes idiomas).\n\nPuedes encontrar el código en Github bajo la licencia MIT!\n\nJuankyApps, 2018-2019"</string>
+  <string name="months">"Enero.Febrero.Marzo.Abril.Mayo.Junio.Julio.Agosto.Septiembre.Octubre.Noviembre.Diciembre."</string>
+  <string name="go_back">"Volver"</string>
+  <string name="more_yaaays">"Haz hecho YAAAY! %1$s veces."</string>
+  <string name="one_yaaay">"Haz hecho YAAAY! %1$s vez."</string>
+  <string name="no_yaaays">"Aún no haz hecho YAAAY!."</string>
+  <string name="press_to_yaaay">"Presiona para YAAAY!"</string>
+  <string name="presents">"presenta"</string>
+  <string name="version">"Versión"</string>
+  <string name="website">"Sitio Web"</string>
+  <string name="github">"Github"</string>
+  <string name="changelog">"Lista de Cambios"</string>
+  <string name="why_yaaay">"¿Por qué YAAAY!?"</string>
+  <string name="about">"Acerca de"</string>
+  <string name="counter">"Contador"</string>
+  <string name="vibrate">"Vibración"</string>
+  <string name="settings">"Configuración"</string>
+  <string name="_app_name_1k3Sbz">"YAAAY!"</string>
+  <string name="app_name">"YAAAY!"</string>
+  <string name="title_activity_kimera">"YAAAY!"</string>
+</resources>

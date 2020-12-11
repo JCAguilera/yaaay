@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="_changelog_1_5_3_Z2tlz7">"- New adaptive icon for our Oreo friends.\n- Minor changes that don\'t need to be listed.\nRemoved privacy policy hehehe!"</string>
+  <string name="_changelog_1_5_2_Z2tlz8">"- Decreased the app size, but not the CO2 levels in the atmosphere. #RealProblems"</string>
+  <string name="_changelog_1_5_1_Z2tlz9">"- Fixed a bug that prevented the YAAAY! sound being played. Yeah, I know."</string>
   <string name="_changelog_1_5_2lWB4H">"- New design! We have completely redesign the app, now it has a more attractive and clean design that focus on the most important feature: YAAAY!\n- Hola Mundo! Now YAAAY! is avaliable in English and Spanish.\n- We fixed several bugs to make room for new better and more powerful bugs."</string>
   <string name="_changelog_1_4_2lWB4G">"- We have changed the splash image, now it shows our new and fresh logo.- The government which we sold your information to, has been overthrown, now you will have more privacy.- Thanks to the advance of modern technology, now the application starts a microsecond faster than in previous versions."</string>
   <string name="_changelog_1_3_2lWB4F">"Fixed a bug that made the app title feel less exciting. (\"yaaay\" -> \"YAAAY!\")."</string>
@@ -7,7 +10,7 @@
   <string name="_changelog_1_1_2lWB4D">"YAAAY! is now available for everyone!Changes:- App size reduced.- New icons.- New design to support all screens!- Added YAAAY counter.- Added About section in settings.- Bug fixes.- We don\'t sell your info to russian mafias anymore.- That was a joke.- Calm down."</string>
   <string name="_changelog_alpha_1_Z1J1HBC">"Alpheichon publiqueichon &lt;3"</string>
   <string name="_changelog_pre_alpha_1_ZhoOdv">"First upload &lt;3"</string>
-  <string name="about_content">"Celebrate random events with your friends!\n\nThis is YAAAY!, the new app that can help you celebrate those special moments when no one else can.\n\nYAAAY! also works like an NativeScript and Angular example app. It uses concepts like:\n\n- Routing.\n- Audio player features.\n- Some special UI components (like the drawer or the switchs).\n- Animations.\n- Load and save simple configurations.\n- Internationalization (i18N).\n\nYou can find the source code in Github under the MIT License!\n\nJuankyApps, 2018-2019"</string>
+  <string name="about_content">"Celebrate random events with your friends!\n\nThis is YAAAY!, the new app that can help you celebrate those special moments when no one else can.\n\nYAAAY! also works like an NativeScript and Angular example app. It uses concepts like:\n\n- Routing.\n- Audio player features.\n- Some special UI components (like the drawer or the switchs).\n- Animations.\n- Load and save simple configurations.\n- Internationalization (i18N).\n\nYou can find the source code in Github under the MIT License!\n\nJuankyApps, 2016-2020"</string>
   <string name="months">"January.February.March.April.May.June.July.August.September.October.November.December."</string>
   <string name="go_back">"Go back"</string>
   <string name="more_yaaays">"You have YAAAYed %1$s times."</string>

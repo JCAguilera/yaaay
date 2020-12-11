@@ -1,10 +1,10 @@
-.home-panel{
+.home-panel {
   vertical-align: center;
   font-size: 20;
   margin: 15;
 }
 
-.description-label{
+.description-label {
   margin-bottom: 15;
 }
 
@@ -21,9 +21,10 @@
 .center-bottom {
   horizontal-align: center;
   vertical-align: bottom;
+  margin-bottom: 20px;
 }
 
-.main-panel{
+.main-panel {
   vertical-align: center;
   text-align: center;
   font-size: 20em;
@@ -42,7 +43,7 @@
   margin-top: 30px;
   margin-left: 40px;
   font-size: 30em;
-  color: gray
+  color: gray;
 }
 
 .bottom-right {
@@ -94,7 +95,7 @@
 }
 
 .logoLabel {
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   horizontal-align: center;
   padding: 10px;
 }

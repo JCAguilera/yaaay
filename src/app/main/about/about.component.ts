@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import localize from "nativescript-localize";
+import { localize } from "@nativescript/localize";
 
 @Component({
   selector: "ns-about",

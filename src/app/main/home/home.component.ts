@@ -3,14 +3,14 @@ import {
   OnInit,
   ChangeDetectorRef,
   AfterViewInit,
+  ViewChild,
+  ElementRef,
 } from "@angular/core";
 import {
   Enums,
   Page,
   Switch,
-  Application,
   Utils,
-  Device,
   ApplicationSettings,
   Button,
   Color,
@@ -18,6 +18,9 @@ import {
 import { Router } from "@angular/router";
 import { TNSPlayer } from "nativescript-audio-player";
 import { Vibrate } from "nativescript-vibrate";
+import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
+import { ChangelogService } from "../changelog/changelog.service";
 
 const { getNumber, setNumber, getBoolean, setBoolean } = ApplicationSettings;
 declare var android: any;
@@ -29,6 +32,9 @@ declare var android: any;
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild(RadSideDrawerComponent) drawerComponent: RadSideDrawerComponent;
+  private drawer: RadSideDrawer;
+
   button: Button;
 
   _player: TNSPlayer;
@@ -38,6 +44,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(
     private _page: Page,
     private router: Router,
+    private _changelogService: ChangelogService,
     private _changeDetectionRef: ChangeDetectorRef
   ) {}
 
@@ -46,15 +53,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this._player = new TNSPlayer();
     this._vibrator = new Vibrate();
     this._page.actionBarHidden = true;
+    this._page.statusBarStyle = "light";
+
     this._page.statusBarColor = new Color("white");
-    this._page.navigationBarColor = new Color("white");
     this._player.initFromFile({
-      audioFile: `~/app/res/yay.mp3`, // ~ = app directory
+      audioFile: `~/assets/yay.mp3`, // ~ = src directory
       loop: false,
     });
   }
 
   ngAfterViewInit() {
+    this.drawer = this.drawerComponent.sideDrawer;
     this._changeDetectionRef.detectChanges();
   }
 
@@ -79,7 +88,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   doYaaay(): void {
     if (this._player.isAudioPlaying()) {
-      this._player.seekTo(0);
+      this._player.seekTo(0.5);
     } else {
       this._player.play();
     }
@@ -130,5 +139,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
   onChangelogButtonPress() {
     this.router.navigate(["changelog"]);
     return;
+  }
+
+  onOpenDrawer() {
+    this.drawer.showDrawer();
+  }
+
+  onCloseDrawer() {
+    this.drawer.closeDrawer();
+  }
+
+  getLatestVersion() {
+    return this._changelogService.changelog[0].title;
   }
 }

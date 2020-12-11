@@ -1,7 +1,7 @@
-<Drawer>
-  <StackLayout leftDrawer class="sideStackLayout" #drawer>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+  <StackLayout tkDrawerContent class="sideStackLayout">
     <StackLayout class="sideTitleStackLayout">
-      <Label class="sideTitleLabel" text="YAAAY!"></Label>
+      <Label class="sideTitleLabel" text="{{ 'app.name' | L }}"></Label>
     </StackLayout>
     <ScrollView>
       <StackLayout class="sideStackLayout">
@@ -67,22 +67,25 @@
         <Image
           class="logo"
           (tap)="openUrl('https://juankyapps.com')"
-          src="~/app/res/juankyapps.png"
+          src="~/assets/juankyapps.png"
           width="75"
         ></Image>
-        <Label text="{{ 'version' | L }} 1.5" class="logoLabel"></Label>
+        <Label
+          text="{{ 'version' | L }} {{ getLatestVersion() }}"
+          class="logoLabel"
+        ></Label>
       </StackLayout>
     </ScrollView>
   </StackLayout>
-  <GridLayout mainContent (loaded)="onGridLoaded($event)">
-    <AbsoluteLayout class="top-left" (tap)="drawer.open()">
+  <GridLayout (loaded)="onGridLoaded($event)" tkMainContent>
+    <AbsoluteLayout class="top-left" (tap)="onOpenDrawer()">
       <Label class="fas" text="&#xf0c9;"></Label>
     </AbsoluteLayout>
     <AbsoluteLayout class="top-panel">
       <Label text="Juanky {{ 'presents' | L }}:"></Label>
     </AbsoluteLayout>
     <StackLayout class="main-panel">
-      <Image style="width: 50%" src="~/app/res/yaaay.png"></Image>
+      <Image style="width: 50%" src="~/assets/yaaay.png"></Image>
       <Label textWrap="true" text="{{ 'press_to_yaaay' | L }}"></Label>
       <Button
         text="YAAAY!"
@@ -97,4 +100,4 @@
       ></Label>
     </AbsoluteLayout>
   </GridLayout>
-</Drawer>
+</RadSideDrawer>
