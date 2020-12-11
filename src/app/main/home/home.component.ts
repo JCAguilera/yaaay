@@ -13,6 +13,7 @@ import {
   Device,
   ApplicationSettings,
   Button,
+  Color,
 } from "@nativescript/core";
 import { Router } from "@angular/router";
 import { TNSPlayer } from "nativescript-audio-player";
@@ -45,6 +46,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this._player = new TNSPlayer();
     this._vibrator = new Vibrate();
     this._page.actionBarHidden = true;
+    this._page.statusBarColor = new Color("white");
+    this._page.navigationBarColor = new Color("white");
     this._player.initFromFile({
       audioFile: `~/app/res/yay.mp3`, // ~ = app directory
       loop: false,
@@ -56,19 +59,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   onGridLoaded(args): void {
-    var window = Application.android.startActivity.getWindow();
-    var View = android.view.View;
-    if (Application.android && Device.sdkVersion >= "21") {
-      var window = Application.android.startActivity.getWindow();
-      window.setStatusBarColor(0x000000);
-      window.setNavigationBarColor(0x000000);
-      var decorView = window.getDecorView();
-      decorView.setSystemUiVisibility(
-        View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-          View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR |
-          View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
-      );
-    }
     this.button = args.object.getViewById("yaaay-btn");
     this.button.animate({ scale: { x: 0.8, y: 0.8 }, duration: 0 });
   }

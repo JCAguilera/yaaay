@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@nativescript-community/systemui": "^1.1.6",
     "@nativescript-community/ui-drawer": "0.0.19",
     "@nativescript/angular": "10.0.0",
     "@nativescript/core": "rc",
